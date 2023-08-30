@@ -1,8 +1,10 @@
-# Tailwing + React + Vite + UI/UX
+# Tailwind + React + Vite + UI/UX
 
 Project to introduce myself into `Tailwind` and learn its features.
 
-It's a business landpage, fully responsive, adn with Modern `UI/UX`.
+Fully responsive landing page for a bank brand, with Modern `UI/UX` in React JS with Tailwind (in Vite)
+
+Figma [file] (https://www.figma.com/file/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=1%3A321&mode=dev)
 
 ---
 
