@@ -4,9 +4,9 @@ Project to introduce myself into `Tailwind` and learn its features.
 
 Fully responsive landing page for a bank brand, with Modern `UI/UX` in React JS with Tailwind (in Vite)
 
-### Figma [file] (https://www.figma.com/file/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=1%3A321&mode=dev)
+### Figma [file](https://www.figma.com/file/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=1%3A321&mode=dev)
 
-### The [site] (https://hoobank-vanesascode.vercel.app)
+### The [site](https://hoobank-vanesascode.vercel.app)
 
 ![hoobank 1](https://github.com/vanesascode/bank-landing-page-tailwind-react-vite-ui-ux/assets/131259155/fec2bdb4-7a86-4464-a5cd-5dfb359319b6)
 
