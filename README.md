@@ -4,7 +4,11 @@ Project to introduce myself into `Tailwind` and learn its features.
 
 Fully responsive landing page for a bank brand, with Modern `UI/UX` in React JS with Tailwind (in Vite)
 
-Figma [file] (https://www.figma.com/file/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=1%3A321&mode=dev)
+### Figma [file] (https://www.figma.com/file/bUGIPys15E78w9bs1l4tgS/HooBank?node-id=1%3A321&mode=dev)
+
+### The [site] (https://hoobank-vanesascode.vercel.app)
+
+![hoobank 1](https://github.com/vanesascode/bank-landing-page-tailwind-react-vite-ui-ux/assets/131259155/fec2bdb4-7a86-4464-a5cd-5dfb359319b6)
 
 ---
 
@@ -138,6 +142,34 @@ This Javascript code is using a conditional (ternary) operator to determine the 
 </li>
 ```
 
+## 🌟 Javascript && to determine elements based on the index of the iterated items:
+
+(See the whole code in the `Stats.jsx` file)
+
+```
+{stats.map((stat, index) => (
+        <div
+          key={stat.id}
+          className={`flex-1 flex justify-start items-center flex-row m-3`}
+        >
+          <h4 className="font-poppins font-semibold xs:text-[40.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white">
+            {stat.value}
+          </h4>
+          <p className="font-poppins font-normal xs:text-[20.45px] text-[15.45px] xs:leading-[26.58px] leading-[21.58px] text-gradient uppercase ml-3">
+            {stat.title}
+          </p>
+          {index !== stats.length - 1 && (
+            <div className={`${styles.flexCenter} flex-1 `}>
+              <p className="font-poppins font-normal xs:text-[12px] text-[9px] xs:leading-[26.58px] leading-[21.58px] text-white ml-3">
+                |
+              </p>
+            </div>
+          )}
+        </div>
+      ))}
+
+```
+
 ## 🌟 Navbar animation:
 
 ```
@@ -171,3 +203,68 @@ That is why we choose a padding for the big screens (sm:py-16, which means from 
 Then, we create a class in our styles.js file: `paddingY: "sm:py-16 py-6"`
 
 And we apply it as javascript in our components: `className={`${styles.paddingY}`}`
+
+## 🌟 Styles props
+
+We can have a reusable component like a button that has the main styles, but that also has styles passed as a prop:
+
+```
+import React from "react";
+
+const Button = ({ styles }) => (
+  <button
+    type="button"
+    className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}
+  >
+    Get Started
+  </button>
+);
+
+export default Button;
+
+
+```
+
+So, in the previous code snippet, `${styles}` is a dynamic class name that allows additional styles to be passed as a prop.
+
+## 🌟 Passing multiple props without specifying each one:
+
+That can be done with the spread operator (...). It passes all the properties of an object as separate props to the component. It allows for a concise and flexible way of passing multiple props without explicitly specifying each one:
+
+In this example it's a list of features we are iterating using a component:
+
+```
+features.map((feature, index) => (
+        <FeatureCard key={feature.id} {...feature} index={index} />
+      ))
+
+```
+
+## 🌟 CSS Variables:
+
+the `:root` selector has two CSS variables set. The :root selector represents the root element of the document, which in most cases is the <html> element.
+
+```
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+```
+
+By defining these CSS variables within the :root selector, they can be accessed and used throughout the document, providing a convenient way to reuse and update values across multiple CSS rules and elements.
+
+For example, in here:
+
+```
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+```
